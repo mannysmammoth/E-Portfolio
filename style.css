@@ -38,16 +38,26 @@ input, textarea {
     border-left: none;
     border-right: none;
     height: 40px;
+    transition: all 300ms ease;
 }
 
 textarea {
-    
+    resize: vertical;
+    height: 100px;
+    margin-top: 8px;
 }
 
 label {
     font-size: 16px;
     font-weight: bold;
+}
 
+input:hover, textarea:hover {
+    border-color: #dcdfe6;
+}
+
+input:focus, textarea:focus {
+    border-color: royalblue;
 }
 
 .container {
@@ -64,6 +74,7 @@ label {
 
 .click {
     transition: all 300ms ease;
+    cursor: pointer;
 }
 
 .click:hover {
@@ -277,6 +288,10 @@ MODAL SECTION
 .modal__half {
     width: 50%;
     padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .modal__languages {
@@ -334,6 +349,7 @@ MODAL SECTION
 
 .modal__sub-title {
     margin: 12px 0 24px 0;
+    font-size: 14px;
 }
 
 .modal__para {
@@ -343,6 +359,74 @@ MODAL SECTION
 
 .form__item {
     margin-bottom: 20px;    
+}
+
+.form__submit {
+    background-color: royalblue;
+    color: white;
+    border: 2px solid royalblue;
+    font-weight: bold;
+    width: 100%;
+    max-width: 130px;
+    padding: 8px 20px;
+    transition: all 300ms ease;
+}
+
+.form__submit:hover {
+    border-color: white;
+    background-color: transparent;
+}
+
+.form__submit:active {
+    border-color: royalblue;
+    color: royalblue;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
+    font-size: 80px;
+    z-index: -1;
+}
+
+.modal__overlay--success {
+    background-color: #4bb543;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.fa-spinner {
+    animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 36px;
+    z-index: 100;
 }
 
 /* 

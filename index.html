@@ -99,8 +99,16 @@
                         <label class="form__item--label">Message</label>
                         <textarea class="input" name="message" type="message" required></textarea>
                     </div>
+                    <button id="contact__submit" class="form__submit">Send Message</button>
                 </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for your message! Looking forward to connect with you!
+                </div>
             </div>
+            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
