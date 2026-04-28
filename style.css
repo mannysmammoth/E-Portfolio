@@ -391,12 +391,12 @@ MODAL SECTION
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading {
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
 }
 
 .modal__overlay--success {
@@ -404,6 +404,10 @@ MODAL SECTION
     font-size: 40px;
     text-align: center;
     padding: 20px;
+}
+
+.modal__overlay--visible {
+    z-index: 1;
 }
 
 .fa-spinner {

@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/80f1a599ce.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
     <title>Emmanuel Corral</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YhlLe5d3U3EvkB9aG",
+      });
+   })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -86,25 +97,25 @@
             <div class="modal__half modal__contact">
                 <h3 class="modal__title modal__title--contact">Contact Me!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I am currently open to any opportunities and or inquiries.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user__name" type="text" required></input>
+                        <input class="input" name="user_name" type="text" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user__email" type="email" required></input>
+                        <input class="input" name="user_email" type="email" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="message" required></textarea>
+                        <textarea class="input" name="message" type="message" ></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send Message</button>
                 </form>
-                <div class="modal__overlay modal__overlay--loading">
+                <div class="modal__overlay modal__overlay--loading ">
                     <i class="fa-solid fa-spinner"></i>
                 </div>
-                <div class="modal__overlay modal__overlay--success">
+                <div class="modal__overlay modal__overlay--success ">
                     Thanks for your message! Looking forward to connect with you!
                 </div>
             </div>
