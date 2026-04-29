@@ -66,7 +66,7 @@
             </div>
           </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -76,7 +76,7 @@
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
                 <h4 class="modal__sub-title modal__sub-title--about" >Frontend Software Engineer.</h4>
-                <p class="modal__para">I'm a 30 years old US based <b class="royal-blue">frontend software engineer</b> with a strong passion for developing interactive websites and applications that cater to having a 
+                <p class="modal__para">I'm a 30 year old US based <b class="royal-blue">frontend software engineer</b> with a strong passion for developing interactive websites and applications that cater to having a 
                     <b class="crimson">positive</b> and <b class="crimson">easy</b> user experience.<br> I currently do freelance work and continuously improve my skills. I work and manage a 
                     <b class="royal-blue">small family transportation company</b> that operates in the oilfields of West Texas & South East New Mexico.</p>
                 <div class="modal__languages">
@@ -95,6 +95,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click"></i>
                 <h3 class="modal__title modal__title--contact">Contact Me!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I am currently open to any opportunities and or inquiries.</h4>
                 <form id="contact__form" onsubmit="contact(event)">
@@ -119,7 +120,6 @@
                     Thanks for your message! Looking forward to connect with you!
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">

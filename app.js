@@ -22,3 +22,14 @@ function contact(event) {
         alert("The email service is temporarily unavailable. Please contact me directly on email@example.com");
     })
 }
+
+let isModalOpen = false;
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+    }
+    //toggle modal
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+}
