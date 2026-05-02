@@ -1,3 +1,47 @@
+/*
+
+BACKGROUND MOTION
+
+*/
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    const scaleFactor = 1 / 20;
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+    
+    
+    for (let i = 0; i < shapes.length; i++) {
+        const isOdd = i % 2 !== 0;
+        const boolInterger = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInterger}px, ${y * boolInterger}px)`
+    }
+}
+
+/* 
+
+CONTRAST TOGGLE
+
+*/
+
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList += " dark-theme";
+    }
+    else {
+        document.body.classList.remove("dark-theme");
+    }
+}
+
+/* 
+
+MODAL
+
+*/ 
+
 // template_andgvab
 // service_0kty3lq
 // YhlLe5d3U3EvkB9aG
